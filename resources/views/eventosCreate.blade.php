@@ -21,28 +21,29 @@
         @csrf
 
         <label for="nombre">Nombre:</label>
-        <input type="text" name="nombre" id="nombre">
+        <input type="text" name="nombre" id="nombre" value="{{old('nombre')}}">
         @error('nombre')
             <i>{{$message}}</i>
         @enderror
         <br>
 
         <label for="correo">Correo:</label>
-        <input type="email" name="correo" id="correo">
+        <input type="email" name="correo" id="correo" value="{{old('correo')}}">
         @error('correo')
             <i>{{$message}}</i>
         @enderror
         <br>
 
         <label for="telefono">telefono:</label>
-        <input type="text" name="telefono" id="telefono">
+        <input type="text" name="telefono" id="telefono" value="{{old('telefono')}}">
         @error('telefono')
             <i>{{$message}}</i>
         @enderror
         <br>
 
         <label for="pedidos">Pedido:</label><br>
-        <textarea name="pedidos" id="pedidos" cols="40" rows="10"></textarea>
+        <textarea name="pedidos" id="pedidos" cols="40" rows="10"> {{old('pedidos')}}</textarea>
+        
         @error('pedidos')
             <i>{{$message}}</i>
         @enderror
